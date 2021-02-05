@@ -17,7 +17,7 @@ const instagramlu = 'https://www.instagram.com/pingin_waras/'; // Nama Instagram
 const whatsapplu = '0878-4811-5476'; // Nomor whatsapplu cok
 const kapanbotaktif = 'Terserah Cok'; // Kapan bot lu aktif
 const grupch1 = 'https://chat.whatsapp.com/CwXdEmu8f7g9tRqLtnN2hH'; // OFFICIAL GRUP LU 1
-const grupch2 = 'https://chat.whatsapp.com/KRWd2FeOTPv8pt2knkoWH0'; // OFFICIAL GRUP LU 2
+const grupch2 = 'https://m.facebook.com/Pingin_waras-100535448727499/'; // OFFICIAL GRUP LU 2
 //
 const
 {
