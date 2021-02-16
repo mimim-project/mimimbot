@@ -1,7 +1,7 @@
 {
-  "name": "XBOT",
+  "name": "MBOT",
   "version": "1.0.0",
-  "description": "Xbot for whatsapp online with termux",
+  "description": "Mbot for whatsapp online with termux",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -14,15 +14,15 @@
   "keywords": [
     "k"
   ],
-  "author": "affis junianto",
+  "author": "mimim project",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/affisjunianto/botwasapv2.git"
+    "url": "git+https://github.com/mimim-project/mimimbot.git"
   },
   "bugs": {
-    "url": "https://github.com/affisjunianto/botwasapv2/issues"
+    "url": "https://github.com/mimim-project/mimimbot/issues"
   },
-"homepage": "https://github.com/affisjunianto/botwasapv2/readme",
+"homepage": "https://github.com/mimim-project/mimimbot/readme",
 "license": "ISC",
 "dependencies": {
     "@adiwajshing/baileys": "^3.3.0",
