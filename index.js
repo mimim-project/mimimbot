@@ -39,19 +39,19 @@ const { ind } = require('./language')
 /********** MENU SETTING **********/
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:Affis Admin\n' 
+            + 'FN:MIMIM\n' 
             + 'ORG: Pengembang XBot;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=6282334297175:+62 823-3429-7175\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=6287848115476:+62 878-4811-5476\n' 
             + 'END:VCARD' 
 blocked = []   
 prefix = '#'
 limitawal = 30
 memberlimit = 0
-cr = '*BOT INI SUDAH TERVERIFIKASI*'
+cr = '*MIMIM-PROJECT*'
 /*************************************/
 
 /******** OWNER NUMBER**********/
-const ownerNumber = ["62895710073737@s.whatsapp.net","6282334297175@s.whatsapp.net"] 
+const ownerNumber = ["6283816446896@s.whatsapp.net","6287848115476@s.whatsapp.net"] 
 /************************************/
 
        
@@ -279,7 +279,7 @@ function kyun(seconds){
 const client = new WAConnection()
    client.on('qr', qr => {
    qrcode.generate(qr, { small: true })
-   console.log(color('[','white'),color('∆','red'),color(']','white'),color('qr already scan.subscribe','white'),color('YOU','red'),color('TUBE','white'),color('ampibi gaming','yellow'))
+   console.log(color('[','white'),color('∆','red'),color(']','white'),color('qr already scan.Follow','white'),color('INS','red'),color('TAGRAM','white'),color('@kadung_pengek.official','yellow'))
 })
 
 client.on('credentials-updated', () => {
@@ -303,7 +303,25 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Hallo @${num.split('@')[0]}\Selamat datang di group *${mdata.subject}* yang betah ya di sini`
+				teks = `Hallo Lur👋 @${num.split('@')[0]}\ Selamat datang di group *${mdata.subject}* 
+
+❍█╭━━━━━━━━━━━━━
+
+❍█│【♡ۣۜۜ፝͜͜͡͡✿➣ *NAME:*
+
+❍█│【♡ۣۜۜ፝͜͜͡͡✿➣ *GENDER:*
+
+❍█│【♡ۣۜۜ፝͜͜͡͡✿➣ *ASKOT:*
+
+❍█│【♡ۣۜۜ፝͜͜͡͡✿➣ *NAMA IG:*
+
+❍█│【♡ۣۜۜ፝͜͜͡͡✿➣ *NAMA DOI:*
+
+❍█│【♡ۣۜۜ፝͜͜͡͡✿➣ *FAVORIT:*
+
+❍█│【♡ۣۜۜ፝͜͜͡͡✿➣ *HOBBY:*
+
+❍█╰━━━━━━━━━━━━━`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -313,7 +331,7 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `akhirnya beban group berkurang 𝟭,bye bye🥳 @${num.split('@')[0]} jasamu akan di kubur dalam²`
+				teks = `SAYONARA TOD👋 @${num.split('@')[0]}`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -552,11 +570,11 @@ client.on('group-participants-update', async (anu) => {
  	   	if (isGroup && isBadWord) {
             if (bad.includes(messagesC)) {
                 if (!isGroupAdmins) {
-                    return reply("JAGA UCAPAN DONG!! 😠")
+                    return reply("JOGO OMONGAN COK!! 😠")
                         .then(() => client.groupRemove(from, sender))
                         .then(() => {
-                            client.sendMessage(from, `*「 ANTI BADWORD 」*\nKamu dikick karena berkata kasar!`, text ,{quoted: mek})
-                        }).catch(() => client.sendMessage(from, `Untung cya bukan admin, kalo admin udah cya kick!`, text , {quoted : mek}))
+                            client.sendMessage(from, `*「 ANTI BADWORD 」*\n Kamu dikick karena berkata kasar!`, text ,{quoted: mek})
+                        }).catch(() => client.sendMessage(from, `Untung nya bukan admin, kalo admin udah di kick!`, text , {quoted : mek}))
                 } else {
                     return reply( "Tolong Jaga Ucapan Min 😇")
                 }
@@ -1063,7 +1081,7 @@ client.on('group-participants-update', async (anu) => {
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
-					teks = `*Nama bot* : ${me.name}\n*OWNER* : *AMPIBI*\n*AUTHOR* : AMPIBI\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}`
+					teks = `*Nama bot* : ${me.name}\n*OWNER* : *MIMIM*\n*AUTHOR* : MIMIM\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
@@ -1117,7 +1135,7 @@ client.on('group-participants-update', async (anu) => {
                 const jmla = args[1]
                 if (jmla <= 1) return reply(`minimal gift limit adalah 1`)
                 if (isNaN(jmla)) return reply(`limit harus berupa angka`)
-                if (!nomerr) return reply(`maaf format salah\nmasukan parameter yang benar\ncontoh : ${prefix}giftlimit @62895710074883 20`)
+                if (!nomerr) return reply(`maaf format salah\nmasukan parameter yang benar\ncontoh : ${prefix}giftlimit @6283816446896`)
                 const cysz = nomerr + '@s.whatsapp.net'
                 var found = false
                         Object.keys(_limit).forEach((i) => {
@@ -1179,7 +1197,7 @@ client.on('group-participants-update', async (anu) => {
                 hasiltf = jumblah - fee
                 addKoinUser(tujuantf, hasiltf)
                 confirmATM(sender, jumblah)
-                addKoinUser('62895710073737@s.whatsapp.net', fee)
+                addKoinUser('6287848115476@s.whatsapp.net', fee)
                 reply(`*「 SUKSES 」*\n\npengiriman uang telah sukses\ndari : +${sender.split("@")[0]}\nke : +${tujuan}\njumblah transfer : ${jumblah}\npajak : ${fee}`)
                 break
 				case 'dompet':
@@ -1559,7 +1577,7 @@ client.on('group-participants-update', async (anu) => {
 					    reply(`*BERHASIL MEMBUKA GROUP*`)
 						client.groupSettingChange(from, GroupSettingChange.messageSend, false)
 					} else if (args[0] === 'tutup') {
-						reply(`*BERHASIL MENUTUP GROUP`)
+						reply(`*BERHASIL MENUTUP GROUP*`)
 						client.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					}
 				break      
@@ -1624,13 +1642,13 @@ client.on('group-participants-update', async (anu) => {
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `𝗔𝘀𝗲𝗸 𝗱𝗮𝗽𝗮𝘁 𝗺𝗮𝗸𝗮𝗻𝗮𝗻,𝗼𝘁𝘄 𝗸𝗶𝗰𝗸 🏃 :\n`
+							teks += `MODAR WE SU 🏃 :\n`
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
 						client.groupRemove(from, mentioned)
 					} else {
-						mentions(`𝗔𝘀𝗲𝗸 𝗱𝗮𝗽𝗮𝘁 𝗺𝗮𝗸𝗮𝗻𝗮𝗻,𝗼𝘁𝘄 𝗸𝗶𝗰𝗸 @${mentioned[0].split('@')[0]} 🏃`, mentioned, true)
+						mentions(`MODAR WE COK @${mentioned[0].split('@')[0]} 🏃`, mentioned, true)
 						client.groupRemove(from, mentioned)
 					}
 					break
@@ -1745,7 +1763,7 @@ client.on('group-participants-update', async (anu) => {
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
 					for (let mem of groupMembers) {
-						teks += `┣➥ @${mem.jid.split('@')[0]}\n`
+						teks += `*NYIMAK AUTO KICK!!!* ┣➥ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
 					mentions(teks, members_id, true)
