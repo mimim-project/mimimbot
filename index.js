@@ -40,7 +40,7 @@ const { ind } = require('./language')
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
             + 'FN:MIMIM\n' 
-            + 'ORG: Pengembang XBot;\n' 
+            + 'ORG: Pengembang MBot;\n' 
             + 'TEL;type=CELL;type=VOICE;waid=6287848115476:+62 878-4811-5476\n' 
             + 'END:VCARD' 
 blocked = []   
