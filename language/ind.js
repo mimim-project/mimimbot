@@ -23,7 +23,7 @@ exports.lvlnoon = () => {
 }
 
 exports.noregis = () => {
-	return`*「 BELUM DAFTAR 」*\n\n*cara daftar ${prefix}daftar nama|umur* \n*contoh ${prefix}daftar affis|17*`
+	return`*「 BELUM DAFTAR 」*\n\n*cara daftar ${prefix}daftar nama|umur* \n*contoh ${prefix}daftar mimim|19*`
 }
 
 exports.rediregis = () => {
@@ -125,7 +125,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *Level* : ${getLevelingLevel(sender)}
 ┣⊱ *Role* : ${role}
 ┣⊱ *User register* : ${_registered.length}
-┗━━━⊱  ⸨ *AFFIS* ⸩  ⊰━━━━┛
+┗━━━⊱  ⸨ *MIMIM* ⸩  ⊰━━━━┛
 
  *${prefix}info*
  *${prefix}donasi*
@@ -229,10 +229,10 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *MHANKBARBARS* <sc ori>
 ┣⊱ *MYBOT TEAM* <team>
 ┃
-┣⊱ NOTE : TQTO DI HAPUS
-┃ GW GAK UP LAGI OKE
+┣⊱ FOLLOW INSTAGRAM : *@kadung_pengek.official*
+┃ 
 ┃
-┗━━⊱  ⸨ *X-BOT* ⸩  ⊰━━━━┛
+┗━━⊱  ⸨ *M-BOT* ⸩  ⊰━━━━┛
 `
 }
 
