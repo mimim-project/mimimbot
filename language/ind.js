@@ -23,7 +23,7 @@ exports.lvlnoon = () => {
 }
 
 exports.noregis = () => {
-	return`*「 BELUM DAFTAR 」*\n\n*cara daftar ${prefix}daftar nama|umur* \n*contoh ${prefix}daftar mimim|19*`
+	return`*「 BELUM DAFTAR 」*\n\n*cara daftar ${prefix}daftar nama|umur* \n*contoh ${prefix}daftar affis|17*`
 }
 
 exports.rediregis = () => {
@@ -114,16 +114,18 @@ exports.reglevelahf = (command, pushname, getLevelingLevel, sender, ahf) => {
 	return`*Maaf ${pushname} level mu belum mencukupi*\n\n*┏⊱level mu : ${getLevelingLevel(sender)}*\n*┣⊱jenis command : ${command}*\n*┗⊱syarat level : ${ahf}*\n\n_NOTE : CHAT/SELALU ON UNTUK MENDAPATKAN XP_`
 }
 
-exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku, role) => { 
+exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku, role, premi) => { 
 	return `
 ┏━━━⊱  *ABOUT USER*  ⊰━━┓
 ┣⊱ *Nama* : ${pushname}
+┣⊱ *Premium* : ${premi}
 ┣⊱ *Nomer* : wa.me/${sender.split("@")[0]}
 ┣⊱ *Uang mu* : Rp${uangku}
 ┣⊱ *XP* : ${getLevelingXp(sender)}/${reqXp} 
 ┣⊱ *Level* : ${getLevelingLevel(sender)}
+┣⊱ *Role* : ${role}
 ┣⊱ *User register* : ${_registered.length}
-┗━━━⊱  ⸨ *MIMIM* ⸩  ⊰━━━━┛
+┗━━━⊱  ⸨ *AFFIS* ⸩  ⊰━━━━┛
 
  *${prefix}info*
  *${prefix}donasi*
@@ -138,7 +140,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}emoji*
 ┣━━⊱  *FUN MENU*  ⊰━━━┫
 ┣⊱ *${prefix}lirik* <text>
-┣⊱ *${prefix}artinama>
+┣⊱ *${prefix}artinama*
 ┣⊱ *${prefix}chord* <text>
 ┣⊱ *${prefix}bisakah* <teks>
 ┣⊱ *${prefix}kapankah* <teks>
@@ -146,24 +148,25 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}rate* <teks>
 ┣⊱ *${prefix}slap*
 ┣⊱ *${prefix}tampar*
-┣⊱ *${prefix}moddroid* <teks>
-┣⊱ *${prefix}happymod* <teks>
+┣⊱ *${prefix}moddroid* <teks> *[VIP]*
+┣⊱ *${prefix}happymod* <teks> *[VIP]*
 ┣━━⊱ *MUTUAL* ⊰━━━━━┫
 ┣⊱ *${prefix}mutual*
 ┣⊱ *${prefix}next*
 ┣━━⊱ *MEDIA MENU* ⊰━━┫
-┣⊱ *${prefix}brainly* [error]
+┣⊱ *${prefix}brainly* *[VIP]*
 ┣⊱ *${prefix}pinterest*
 ┣⊱ *${prefix}resepmasakan* <teks>
 ┣⊱ *${prefix}igstalk* <username>
 ┣⊱ *${prefix}bitly* <link>
-┣⊱ *${prefix}tiktok* <username>
+┣⊱ *${prefix}tiktok* <username> *[VIP]*
+┣⊱ *${prefix}tiktokstalk* <username> *[VIP]*
 ┣⊱ *${prefix}ssweb* <link>
 ┣⊱ *${prefix}kbbi* <text>
 ┣━━⊱ *YT & SONG* ⊰━━━┫
-┣⊱ *${prefix}ytmp3* <link>
-┣⊱ *${prefix}ytmp4* <link>
-┣⊱ *${prefix}joox* <judul>
+┣⊱ *${prefix}ytmp3* <link> *[VIP]*
+┣⊱ *${prefix}ytmp4* <link> *[VIP]*
+┣⊱ *${prefix}joox* <judul> *[VIP]*
 ┣━━⊱  *NSFW MENU*  ⊰━┫
 ┣⊱ *${prefix}anjing*
 ┣⊱ *${prefix}blowjob*
@@ -179,8 +182,10 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}buylimit* <jumblah>
 ┣⊱ *${prefix}transfer* <tag |jumblah>
 ┣⊱ *${prefix}dompet*
-┣⊱ *${prefix}leaderboard*
+┣⊱ *${prefix}giftlimit* <tag jumblah>
+┣⊱ *${prefix}leaderboard* <jumblah>
 ┣━━⊱ *GROUP MENU* ⊰━┫
+┣⊱ *${prefix}delete* <tag message>
 ┣⊱ *${prefix}hidetag*
 ┣⊱ *${prefix}blocklist*
 ┣⊱ *${prefix}grouplist*
@@ -200,8 +205,12 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}nsfw* [1/0]
 ┣⊱ *${prefix}simih* [1/0]
 ┣⊱ *${prefix}welcome* [1/0]
+┣⊱ *${prefix}antilink* [1/0]
+┣⊱ *${prefix}nobadword* [enable/disable]
 ┣━━⊱ *OWNER MENU* ⊰━┫
 ┣⊱ *${prefix}bc* <teks>
+┣⊱ *${prefix}addbadword* <text>
+┣⊱ *${prefix}delbadword* <text>
 ┣⊱ *${prefix}bcgc* <teks>
 ┣⊱ *${prefix}kickall* <rawan ban>
 ┣⊱ *${prefix}setreply* <teks>
@@ -220,10 +229,10 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *MHANKBARBARS* <sc ori>
 ┣⊱ *MYBOT TEAM* <team>
 ┃
-┣⊱ FOLLOW INSTAGRAM : @pingin_waras
-
+┣⊱ NOTE : TQTO DI HAPUS
+┃ GW GAK UP LAGI OKE
 ┃
-┗━━⊱  ⸨ *M-BOT* ⸩  ⊰━━━━┛
+┗━━⊱  ⸨ *X-BOT* ⸩  ⊰━━━━┛
 `
 }
 
@@ -234,6 +243,7 @@ exports.levelup = (pushname, sender, getLevelingXp,  getLevel, getLevelingLevel,
 ┣⊱ *Nomer* : wa.me/${sender.split("@")[0]}
 ┣⊱ *Xp* : ${getLevelingXp(sender)}
 ┣⊱ *Limit* : +3
+┣⊱ *Role*: ${role}
 ┗⊱ *Level* : ${getLevel} ⊱ ${getLevelingLevel(sender)}
 `}
  
@@ -256,3 +266,22 @@ exports.satukos = () => {
 exports.uangkau = (pushname, sender, uangkau) => {
 	return`*┏⊱ 「 ATM 」⊰━┓*\n┣⊱ *Nama* : ${pushname}\n┣⊱ *Nomer* : ${sender.split("@")[0]}\n┣⊱ *Uang* : ${uangkau}\n┗━━━━━━━━━━`
 }
+
+exports.premadd = (pnom) => {
+	return`*「 PREMIUM ADD 」*
+
+*Name* : ${pnom}
+*Expired* : 30 DAY\n*thank for order premium*`
+}
+
+exports.dellprem = (hnom) => {
+	return`*「 PREMIUM DELETE 」*
+
+*Name* : ${hnom}
+*Expired* : NOW:v\n*thank for order premium back soon for buying again:D*`
+}
+
+exports.premon = (pushname) => {
+	return`MAAF ${pushname} ANDA BUKAN USER PREMIUM`
+}
+
