@@ -2,13 +2,17 @@
 
 apt-get update
 apt-get upgrade
-apt-get install nodejs
-apt-get install libwebp
-apt-get install mc
-apt-get install ffmpeg
-apt-get install wget
-apt-get install tesseract
+pkg install wget
+pkg install ffmpeg
+pkg install nodejs
+pkg install npm
+pkg install tesseract
+npm i -g cwebp
+npm i -g ytdl
+npm i node-tesseract-ocr
+npm i
+npm i got
 wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-ocr/tessdata/blob/master/ind.traineddata?raw=true"
 npm install
 
-echo "[*] All dependencies have been installed, please run the command \"npm start\" to immediately start the script"
+echo "[*] SUKSES BRO SILAHKAN KETIK \"node index.js\" Powered by Ramlan ID"
